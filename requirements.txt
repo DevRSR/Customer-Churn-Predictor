@@ -2,5 +2,4 @@ scikit-learn
 matplotlib
 streamlit
 pandas
-pickle
 shap
