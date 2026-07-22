@@ -91,7 +91,7 @@ Logistic regression using class weight to handle class imbalance produce the fol
 Remark: Even though accuracy look impressive and false positive rate (12/(12+468) = 2.5%) falls below our offer budget. The model have a very low recall, missing out on half of customers that actually churn, which will cost the business of its most valuable customers.
 
 Logistic regression using SMOTE to handle class imbalance produce the following metrics
-> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_with_smote.png))
+> ![Confusion matrics of log with smote model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_with_smote.png))
 - Accuracy : 81% 
 - precision: (churn:45%, non-churn:97%)
 - recall: (churn: 84%, non-churn: 81%)
@@ -99,14 +99,14 @@ Remark: SMOTE did increase the recall of churn customers from 48% to 84%, which 
 
 ### Random Forest Classifier
 Random Forest Classifier without resampling of class produce the following metrics
-> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_without_smote.png))
+> ![Confusion matrics of rfc without smote model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_without_smote.png))
 - Accuracy: 96%
 - precision: (churn: 94% , non-churn: 97%)
 - recall: (churn: 83%, non-churn: 99%)
 Remark: This is a sophisticated model with an accuracy of 96% and FPR (5/ (5+476) ~ 1%) which means that only (5 x $94 = $470) out of $15000 will be spent on wrongly accused customers. Also the recall of customer that churn is 83% which means that out of ten customers that churn only 2 excaped being flagged by the model.
 
 Random Forest Classifier using SMOTE to handle class imbalance produce the following metrics:
-> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_with_smote.png))
+> ![Confusion matrics of rfc with smote model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_with_smote.png))
 - Accuracy: 96%
 - precision: (churn: 82% , non-churn: 99%)
 - recall: (churn: 94%, non-churn: 96%)
@@ -114,14 +114,14 @@ Remark: This is a sophisticated model with an accuracy of 96% same as the one wi
 
 ### XGBoost Classifier
 XGBoost classifier with class imbalance produce the following metrics:
-> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_without_smote.png))
+> ![Confusion matrics of xgb without smote model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_without_smote.png))
 - Accuracy: 96%
 - precision: (churn: 89% , non-churn: 98%)
 - recall: (churn: 87%, non-churn: 98%)
 Remark: The accuracy of this model is 96% same as majority of the models, with FPR of (10 / (10+471) ~ 2.1%) taking only (10 x $94 = $940) of our retention budget. The precision of the model for churn is 89% and recall is 87%.
 
 XGBoost classifier with class imbalance produce the following metrics:
-> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_with_smote.png))
+> ![Confusion matrics of xgb with smote model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_with_smote.png))
 - Accuracy: 96%
 - precision: (churn: 81% , non-churn: 99%)
 - recall: (churn: 93%, non-churn: 96%)
