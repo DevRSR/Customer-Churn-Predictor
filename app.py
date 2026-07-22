@@ -5,7 +5,7 @@ import pickle
 import shap
 
 # Load the trained model
-model = pickle.load(open('final_model.pkl', 'rb'))
+model = pickle.load(open('./model/final_model.pkl', 'rb'))
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 st.title("📉 Customer Churn Risk Predictor")
@@ -74,7 +74,7 @@ with tab1:
             # Why this customer is predicted to churn
             st.subheader("Why this Prediction")
 
-            explainer = pickle.load(open("shap_explainer.pkl", "rb"))
+            explainer = pickle.load(open("./model/shap_explainer.pkl", "rb"))
             
             explaination = explainer(input_data)
             fig, ax = plt.subplots()
