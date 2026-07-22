@@ -37,42 +37,46 @@ Libraries used for this project are:
 ## EDA
 Before the EDA an data integrity check was done on the dataset which led to the discovery of 300 duplicates and none null values. After the removal of the duplicates the rows of the dataset reduce to 2850 rows from 3150 rows.
 ### 1. Churn Distribution
-
-15.6% of customers churn the telecom company
+> ![Churn distribution](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Customer%20churn%20class%20distribution.png)
+> 15.6% of customers churn the telecom company
 
 ### 2. Call Failure distribution by churn status
+> ![Call Failure distribution by churn status](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Call%20Failures%20by%20Churn%20Status.png)
 recording a call failure of more than 20 can contribute to customer churn
 
 ### 3. Complaints distribution by churn status
+> ![Complaints distribution by churn status](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Customer%20Churn%20by%20Number%20of%20Complaints.png)
 
-About 40% of customers that churn make complains
+> About 40% of customers that churn make complains
 
 ### 4. Call Failure with complaints
-
-This shows that complaints are mostly about call failure.
+> ![Distribution of call failure by complains](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Call%20Failures%20by%20Complaining%20Status.png)
+> This shows that complaints are mostly about call failure.
 ### 5. Subcription Length distribution by churn status
-
-The more the length of subscription of a customer the less likely they churn.
+> ![Subscription Length by churn status](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Subscription%20Length%20by%20Churn%20class.png)
+> The more the length of subscription of a customer the less likely they churn.
 
 ### 6. Distribution of charge amount based on churn status
-
-This shows that charge amount has negligible effect on customer churn
+> ![Distribution of charge Amount by churn] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Charge%20Amount%20by%20Churn%20Status.png)
+> This shows that charge amount has negligible effect on customer churn
 
 ### 7. Distribution of customer churn class by Distinct Called Numbers
-
-This shows that the more unique number a customer call the less they are likely to churn
+> ![Distribution of churn class by distincr called number] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Distinct%20Called%20Numbers%20by%20Churn%20Status.png)
+> This shows that the more unique number a customer call the less they are likely to churn
 
 ### 8. Distribution of customer churn class by Frequency of use 
-
-The more customers use the telcom company services the less likely they leave.
+> ! [Distribution of churn class by FOU] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Frequency%20of%20use%20by%20Churn%20Status.png)
+> The more customers use the telcom company services the less likely they leave.
 
 ### 9. Distribution of customer status based on churn class
+> ![Distribution of churn class by customer status](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Status.png)
 
-The more customer are active on a line the less likely the churn.
+> The more customer are active on a line the less likely the churn.
 
 ### 10 Distribution of customer value
+> ![Distribution of churn by customer value] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Customer%20Value.png)
 
-Majority of customer having less than or equal to $500 are more likely to churn.
+> Majority of customer having less than or equal to $500 are more likely to churn.
 
 ## Features 
 No additional feature was addes to the dataset as the existing features satisfy the requirement of the project.
@@ -80,12 +84,14 @@ No additional feature was addes to the dataset as the existing features satisfy 
 ## Models
 ### Logistic Regression
 Logistic regression using class weight to handle class imbalance produce the following metrics
+> ![Confusion matrics of the model](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png)
 - Accuracy : 90% 
 - precision: (churn:78%, non-churn:90%)
 - recall: (churn: 48%, non-churn: 98%)
 Remark: Even though accuracy look impressive and false positive rate (12/(12+468) = 2.5%) falls below our offer budget. The model have a very low recall, missing out on half of customers that actually churn, which will cost the business of its most valuable customers.
 
 Logistic regression using SMOTE to handle class imbalance produce the following metrics
+> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_with_smote.png))
 - Accuracy : 81% 
 - precision: (churn:45%, non-churn:97%)
 - recall: (churn: 84%, non-churn: 81%)
@@ -93,12 +99,14 @@ Remark: SMOTE did increase the recall of churn customers from 48% to 84%, which 
 
 ### Random Forest Classifier
 Random Forest Classifier without resampling of class produce the following metrics
+> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_without_smote.png))
 - Accuracy: 96%
 - precision: (churn: 94% , non-churn: 97%)
 - recall: (churn: 83%, non-churn: 99%)
 Remark: This is a sophisticated model with an accuracy of 96% and FPR (5/ (5+476) ~ 1%) which means that only (5 x $94 = $470) out of $15000 will be spent on wrongly accused customers. Also the recall of customer that churn is 83% which means that out of ten customers that churn only 2 excaped being flagged by the model.
 
 Random Forest Classifier using SMOTE to handle class imbalance produce the following metrics:
+> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Rfc_model_with_smote.png))
 - Accuracy: 96%
 - precision: (churn: 82% , non-churn: 99%)
 - recall: (churn: 94%, non-churn: 96%)
@@ -106,12 +114,14 @@ Remark: This is a sophisticated model with an accuracy of 96% same as the one wi
 
 ### XGBoost Classifier
 XGBoost classifier with class imbalance produce the following metrics:
+> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_without_smote.png))
 - Accuracy: 96%
 - precision: (churn: 89% , non-churn: 98%)
 - recall: (churn: 87%, non-churn: 98%)
 Remark: The accuracy of this model is 96% same as majority of the models, with FPR of (10 / (10+471) ~ 2.1%) taking only (10 x $94 = $940) of our retention budget. The precision of the model for churn is 89% and recall is 87%.
 
 XGBoost classifier with class imbalance produce the following metrics:
+> ![Confusion matrics of the model]([https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/log_reg_model_without_smote.png](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_with_smote.png))
 - Accuracy: 96%
 - precision: (churn: 81% , non-churn: 99%)
 - recall: (churn: 93%, non-churn: 96%)
@@ -121,6 +131,7 @@ Remark: This is one of the most sophisticated model with accuracy of 96% and FPR
 The best model for this project is XGBoost classifier(with SMOTE) that maximize recall to 93% which make it rarely miss out customer that might churn even though its FPR is high at 3.3%, the model satisfy the need of the company in keeping its valuable customers. 
 
 ## Key Findings
+> ![Feature Importance of the best model] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_feature_importance.png)
 ### Finding 1: Poor Complaints Feedback make customers churn
 About 45% of customers that churned the company had complaint filed to the company about their service quality.
 
