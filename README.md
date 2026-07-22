@@ -121,7 +121,7 @@ XGBoost classifier with class imbalance produce the following metrics:
 Remark: The accuracy of this model is 96% same as majority of the models, with FPR of (10 / (10+471) ~ 2.1%) taking only (10 x $94 = $940) of our retention budget. The precision of the model for churn is 89% and recall is 87%.
 
 XGBoost classifier with class imbalance produce the following metrics:
-> ![Confusion matrics of xgb with smote model](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_model_with_smote.png)
+> ![Confusion matrics of xgb with smote model](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/New%20xgb%20confusion%20matrix.png)
 - Accuracy: 96%
 - precision: (churn: 81% , non-churn: 99%)
 - recall: (churn: 93%, non-churn: 96%)
