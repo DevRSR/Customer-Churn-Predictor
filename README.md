@@ -1,5 +1,6 @@
 # Customer-Churn-Predictor
 This is a machine learning project that uses Iranian Telecom company dataset from UCI to build a model that not only predict customers that will churn the company but provide a business oversight and solution to the problem.
+[here is the link to the App](https://rsr-customer-churn-predictor.streamlit.app/)
 ## Problem Statement
 An Iranian telecom company lost an estimated $58,950 (Calculated as the sum of customer value across all churned customers) to customer churn over 12 months, which is approximately 4.2% of annual revenue. The retention team has a $15,000 budget to intervene with at-risk customers. Assuming the cost per retention offer is 20% ($94) of avg. customer value ($470), this budget supports flagging roughly 159 customers. Given this constraint, we cap the false-positive rate at 5% (≈143 customers) which fits within budget while preserving capacity to catch true churners, hence the goal of this project is to build a that maximaze recall of high-value at-risk customers within this budget ceiling.
 
