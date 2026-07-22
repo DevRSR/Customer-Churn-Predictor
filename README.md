@@ -57,15 +57,15 @@ recording a call failure of more than 20 can contribute to customer churn
 > The more the length of subscription of a customer the less likely they churn.
 
 ### 6. Distribution of charge amount based on churn status
-> ![Distribution of charge Amount by churn] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Charge%20Amount%20by%20Churn%20Status.png)
+> ![Distribution of charge Amount by churn](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Charge%20Amount%20by%20Churn%20Status.png)
 > This shows that charge amount has negligible effect on customer churn
 
 ### 7. Distribution of customer churn class by Distinct Called Numbers
-> ![Distribution of churn class by distincr called number] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Distinct%20Called%20Numbers%20by%20Churn%20Status.png)
+> ![Distribution of churn class by distincr called number](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Distinct%20Called%20Numbers%20by%20Churn%20Status.png)
 > This shows that the more unique number a customer call the less they are likely to churn
 
 ### 8. Distribution of customer churn class by Frequency of use 
-> ! [Distribution of churn class by FOU] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Frequency%20of%20use%20by%20Churn%20Status.png)
+> ! [Distribution of churn class by FOU](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Frequency%20of%20use%20by%20Churn%20Status.png)
 > The more customers use the telcom company services the less likely they leave.
 
 ### 9. Distribution of customer status based on churn class
@@ -74,7 +74,7 @@ recording a call failure of more than 20 can contribute to customer churn
 > The more customer are active on a line the less likely the churn.
 
 ### 10 Distribution of customer value
-> ![Distribution of churn by customer value] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Customer%20Value.png)
+> ![Distribution of churn by customer value](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Customer%20Value.png)
 
 > Majority of customer having less than or equal to $500 are more likely to churn.
 
@@ -131,7 +131,7 @@ Remark: This is one of the most sophisticated model with accuracy of 96% and FPR
 The best model for this project is XGBoost classifier(with SMOTE) that maximize recall to 93% which make it rarely miss out customer that might churn even though its FPR is high at 3.3%, the model satisfy the need of the company in keeping its valuable customers. 
 
 ## Key Findings
-> ![Feature Importance of the best model] (https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_feature_importance.png)
+> ![Feature Importance of the best model](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Xgb_feature_importance.png)
 ### Finding 1: Poor Complaints Feedback make customers churn
 About 45% of customers that churned the company had complaint filed to the company about their service quality.
 
