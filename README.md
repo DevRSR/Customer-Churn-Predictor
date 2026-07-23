@@ -72,7 +72,7 @@ recording a call failure of more than 20 can contribute to customer churn
 ### 9. Distribution of customer status based on churn class
 > ![Distribution of churn class by customer status](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Status.png)
 
-> The more customer are active on a line the less likely the churn.
+> The more customer are active on a line the less likely they churn.
 
 ### 10 Distribution of customer value
 > ![Distribution of churn by customer value](https://github.com/DevRSR/Customer-Churn-Predictor/blob/main/outputs/Distribution%20of%20Churn%20by%20Customer%20Value.png)
